@@ -7,3 +7,4 @@ rm ~/.bashrc
 ln -s "$pwd/bashrc" ~/.bashrc
 ln -s "$pwd/vimrc" ~/.vimrc
 ln -s "$pwd/tmux.conf" ~/.tmux.conf
+cat dconfsettings | dconf load /
