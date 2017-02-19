@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Install Caffeine
+. install_caffeine.sh
 sudo dnf install -y vim tmux thefuck powerline-fonts
 sudo pip3 install --upgrade pip
 pip3 install --user powerline-status
