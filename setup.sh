@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Install Caffeine
-. install_caffeine.sh
+#. install_caffeine.sh
 # Install packages.
 sudo dnf install -y vim tmux thefuck powerline-fonts
 # Install powerline.
