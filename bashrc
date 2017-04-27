@@ -13,6 +13,7 @@ alias vi=vim
 alias l="ls -la"
 alias c="clear"
 alias t="tmux"
+alias cleandocker='docker kill `docker ps -q`; docker rm `docker ps -aq`; docker image rm `docker images -q`'
 
 # Powerline
 if [ -f `which powerline-daemon` ]; then
