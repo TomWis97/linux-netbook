@@ -12,6 +12,8 @@ rm ~/.bashrc
 ln -s "$pwd/bashrc" ~/.bashrc
 ln -s "$pwd/vimrc" ~/.vimrc
 ln -s "$pwd/tmux.conf" ~/.tmux.conf
+ln -s "$pwd/i3config" ~/.config/i3/config
+ln -s "$pwd/compton.conf ~/.config/compton.conf
 # Set dconf settings.
 cat dconfsettings | dconf load /
 # Set dark theme.
