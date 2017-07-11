@@ -172,3 +172,4 @@ gaps outer 5
 smart_gaps on
 
 exec --no-startup-id compton
+exec --no-startup-id shutter --min_at_startup
