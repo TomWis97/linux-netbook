@@ -7,10 +7,10 @@ sudo dnf install -y vim tmux thefuck powerline-fonts
 sudo pip3 install --upgrade pip
 pip3 install --user powerline-status
 # Install i3-gaps
-sudo dnf copr enable yaroslav/i3desktop
+sudo dnf copr enable yaroslav/i3desktop -y
 sudo dnf install i3-gaps compton rofi -y
 # Install other packages
-sudo dnf install shutter ImageMagic -y
+sudo dnf install ImageMagic -y
 # Create config files.
 pwd=`pwd`
 rm ~/.bashrc
