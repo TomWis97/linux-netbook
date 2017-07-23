@@ -14,6 +14,8 @@ sudo dnf install ImageMagick -y
 # Create config files.
 pwd=`pwd`
 rm ~/.bashrc
+mkdir ~/.config/i3
+mkdir ~/.config/rofi
 ln -s "$pwd/bashrc" ~/.bashrc
 ln -s "$pwd/vimrc" ~/.vimrc
 ln -s "$pwd/tmux.conf" ~/.tmux.conf
