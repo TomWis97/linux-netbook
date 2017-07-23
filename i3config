@@ -164,9 +164,15 @@ bar {
 
 exec --no-startup-id nitrogen --restore
 
+# Colors
+# class                 border  backgr. text    indicator child_border
+#client.focused          ffffff #285577 #ffffff #2e9ef4   #285577
+#client.unfocused        ff0000 #222222 #888888 #292d2e   #222222
 
 # -------- i3-gaps --------
-for_window [class="^.*"] border pixel 0
+#for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
+hide_edge_borders smart
 gaps inner 10
 gaps outer 5
 smart_gaps on
