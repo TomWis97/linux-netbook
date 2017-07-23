@@ -1,0 +1,12 @@
+[global_config]
+
+[keybindings]
+
+[profiles]
+  [[default]]
+    font = 
+    background_color = 
+    foreground_color = 
+    scrollback_lines = 10000
+    cursor_blink = true
+    
