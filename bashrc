@@ -34,5 +34,5 @@ export SUDO_EDITOR=vim
 export LIBVIRT_DEFAULT_URI=qemu:///system
 
 # For i3
-export TERMINAL=gnome-terminal
+export TERMINAL=terminator
 export EDITOR=vim

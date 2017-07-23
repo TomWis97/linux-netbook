@@ -10,7 +10,7 @@ pip3 install --user powerline-status
 sudo dnf copr enable yaroslav/i3desktop -y
 sudo dnf install i3-gaps compton rofi -y
 # Install other packages
-sudo dnf install ImageMagick -y
+sudo dnf install terminator ImageMagick -y
 # Create config files.
 pwd=`pwd`
 rm ~/.bashrc
