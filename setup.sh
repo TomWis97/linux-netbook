@@ -21,7 +21,6 @@ ln -s "$pwd/vimrc" ~/.vimrc
 ln -s "$pwd/tmux.conf" ~/.tmux.conf
 ln -s "$pwd/i3config" ~/.config/i3/config
 ln -s "$pwd/compton.conf" ~/.config/compton.conf
-mkdir ~/.config/rofi
 ln -s "$pwd/rofi.conf" ~/.config/rofi/config
 # Set dconf settings.
 cat dconfsettings | dconf load /
