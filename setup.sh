@@ -16,12 +16,14 @@ pwd=`pwd`
 rm ~/.bashrc
 mkdir ~/.config/i3
 mkdir ~/.config/rofi
+mkdir ~/.config/terminator
 ln -s "$pwd/bashrc" ~/.bashrc
 ln -s "$pwd/vimrc" ~/.vimrc
 ln -s "$pwd/tmux.conf" ~/.tmux.conf
 ln -s "$pwd/i3config" ~/.config/i3/config
 ln -s "$pwd/compton.conf" ~/.config/compton.conf
 ln -s "$pwd/rofi.conf" ~/.config/rofi/config
+ln -s "$pwd/terminator" ~/.config/terminator/config
 # Set dconf settings.
 cat dconfsettings | dconf load /
 # Set dark theme.
