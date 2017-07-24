@@ -25,4 +25,4 @@ filetype indent on
 set lazyredraw
 " Show matching brackets
 set showmatch
-
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
