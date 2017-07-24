@@ -1,0 +1,13 @@
+- name: tomwis97/linux-desktop
+  hosts: localhost
+  connection: local
+  tasks:
+    - debug:
+        msg: "{{item}}"
+      with_items:
+        - test1
+        - test2
+    - name: Install python2-dnf
+      command: /usr/bin/dnf install -y python2-dnf
+      become: yes
+    - include: dnf.yml

@@ -1,0 +1,80 @@
+- name: Enable repos from rpms
+  become: yes
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - 'https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm'
+    - 'https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-26.noarch.rpm'
+    - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+
+- name: Enable repos from URLs
+  become: yes
+  yum_repository:
+    name: negativo17-spotify
+    baseurl: "{{ item.baseurl }}"
+    description: "{{ item.description }}"
+  with_items:
+    - { baseurl: 'https://copr.fedorainfracloud.org/coprs/yaroslav/i3desktop/repo/fedora-26/yaroslav-i3desktop-fedora-26.repo', description: 'COPR repo by yaroslav for i3-gaps, rofi and compton.' }
+    - { baseurl: 'https://copr.fedorainfracloud.org/coprs/notkild/polybar/repo/fedora-26/notkild-polybar-fedora-26.repo', description: 'COPR repo by notkild for polybar' }
+    - { baseurl: 'https://negativo17.org/repos/fedora-spotify.repo', description: 'Repo for Spotify-client' }
+
+
+
+- name: Update packages
+  become: yes
+  dnf:
+    name: '*'
+    state: latest
+
+- name: Install software from repos
+  become: yes
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - acpi
+    - compton
+    - ffmpeg
+    - fuse-exfat
+    - gimp
+    - gnome-tweak-tool
+    - htop
+    - i3-gaps
+    - icedtea-web
+    - iperf3
+    - java-1.8.0-openjdk
+    - lm_sensors
+    - mc
+    - meld
+    - nmap
+    - nmap-frontend
+    - powerline-fonts
+    - puddletag
+    - remmina
+    - rofi
+    - simplescreenrecorder
+    - smartmontools
+    - solaar
+    - steam
+    - terminator
+    - thefuck
+    - thunderbird
+    - tmux
+    - vim
+    - vlc
+    - wireshark
+    - wireshark-gtk
+    - xbindkeys
+    - xguest
+    - xorg-x11-apps
+
+- shell: curl -s https://api.github.com/repos/atom/atom/releases | grep browser_download_url | grep '64[.].rpm' | head -n 1 | cur -d '"' -f 4
+  register: atom_url
+
+- name: Extra packages outside of repos
+  become: yes
+  dnf:
+    name: "{{ item }}"
+  with_items:
+    - "{{ atom_url }}"
