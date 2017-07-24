@@ -69,7 +69,7 @@
     - xguest
     - xorg-x11-apps
 
-- shell: curl -s https://api.github.com/repos/atom/atom/releases | grep browser_download_url | grep '64[.].rpm' | head -n 1 | cur -d '"' -f 4
+- shell: curl -s https://api.github.com/repos/atom/atom/releases | grep browser_download_url | grep '64[.]rpm' | head -n 1 | cut -d '"' -f 4
   register: atom_url
 
 - name: Extra packages outside of repos
@@ -77,4 +77,4 @@
   dnf:
     name: "{{ item }}"
   with_items:
-    - "{{ atom_url }}"
+    - "{{ atom_url.stdout }}"

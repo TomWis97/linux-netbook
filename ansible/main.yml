@@ -11,3 +11,4 @@
       command: /usr/bin/dnf install -y python2-dnf
       become: yes
     - include: dnf.yml
+    - include: pip3.yml

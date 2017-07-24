@@ -1,0 +1,8 @@
+- name: Update pip3
+  become: yes
+  command: /usr/bin/pip3 install --upgrade pip
+
+- name: Install pip3 modules
+  command: "/usr/bin/pip3 install --user {{ item }} "
+  with_items:
+    - powerline-status
