@@ -8,21 +8,13 @@
     - 'https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-26.noarch.rpm'
     - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 
-- name: Enable repos from URLs
-  become: yes
-  yum_repository:
-    name: "{{ item.name }}"
-    baseurl: "{{ item.baseurl }}"
-    description: "{{ item.description }}"
-  with_items:
-    - { name: 'yaroslav-i3desktop', baseurl: 'https://copr.fedorainfracloud.org/coprs/yaroslav/i3desktop/repo/fedora-26/yaroslav-i3desktop-fedora-26.repo', description: 'COPR repo by yaroslav for i3-gaps, rofi and compton.' }
-    - { name: 'notkild-polybar', baseurl: 'https://copr.fedorainfracloud.org/coprs/notkild/polybar/repo/fedora-26/notkild-polybar-fedora-26.repo', description: 'COPR repo by notkild for polybar' }
-
 - name: Enable repos via commandline
   become: yes
   command: "/usr/bin/dnf config-manager --add-repo={{ item }}"
   with_items:
     - "https://negativo17.org/repos/fedora-spotify.repo"
+    - "https://copr.fedorainfracloud.org/coprs/yaroslav/i3desktop/repo/fedora-26/yaroslav-i3desktop-fedora-26.repo"
+    - "https://copr.fedorainfracloud.org/coprs/notkild/polybar/repo/fedora-26/notkild-polybar-fedora-26.repo"
 
 - name: Update packages
   become: yes
