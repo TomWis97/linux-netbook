@@ -1,4 +1,15 @@
-- file:
+- name: Importing dconf settings
+  shell: "cat {{ playbook_dir }}/configs/dconfsettings | dconf load /"
+
+- name: Setting dark GTK theme
+  copy:
+    dest: "{{ ansible_env.HOME }}/.config/gtk-3.0/settings.ini"
+    content: |
+      "[Settings]
+      gtk-application-prefer-dark-theme=1"
+
+- name: Linking config files
+  file:
     src: "{{ playbook_dir}}/configs/{{ item.name }}"
     dest: "{{ ansible_env.HOME }}/{{ item.dest }}"
     state: link
