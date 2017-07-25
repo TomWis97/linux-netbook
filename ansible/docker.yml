@@ -1,0 +1,22 @@
+- name: Install Docker package
+  become: yes
+  dnf:
+    name: docker-ce
+    state: present
+
+- name: Start and enable Docker service
+  become: yes
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+
+- debug:
+    var: ansible_user_id
+
+- name: Adding user to docker group
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    append: yes

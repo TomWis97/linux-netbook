@@ -10,3 +10,4 @@
     - include: ansible/dnf.yml
     - include: ansible/pip3.yml
     - include: ansible/config.yml
+    - include: ansible/docker.yml
