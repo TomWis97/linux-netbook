@@ -3,7 +3,7 @@
   connection: local
   vars:
     - install_docker: yes
-    - install_synergy: yes
+    - install_synergy: no
     - synergy_server: CLNT-TomDesktop
   tasks:
     - name: Install python2-dnf
