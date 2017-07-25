@@ -8,6 +8,16 @@
     - 'https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-26.noarch.rpm'
     - "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 
+- name: Enable repos from URL
+  become: yes
+  yum_repository:
+    name: "{{ item.name }}"
+    baseurl: "{{ item.baseurl }}"
+    description: "{{ item.description }}"
+  with_items:
+    # TODO: Docker hasnt released fc26 repo yet, so using hardcoded fc25.
+    - { name: 'Docker-CE', description: 'Docker CE Fedora repo', baseurl: 'https://download.docker.com/linux/fedora/25/x86_64/stable' }
+
 - name: Enable repos via commandline
   become: yes
   command: "/usr/bin/dnf config-manager --add-repo={{ item }}"
