@@ -24,7 +24,7 @@
     state: link
   with_items:
     - { name: "vimrc", dest: ".vimrc" }
-    - { name: "bashrc", dest: ".basrc" }
+    - { name: "bashrc", dest: ".bashrc" }
     - { name: "tmux.conf", dest: ".tmux.conf" }
     - { name: "i3", dest: ".config/i3/config" }
     - { name: "compton.conf", dest: ".config/compton.conf" }
