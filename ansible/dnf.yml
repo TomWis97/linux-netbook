@@ -53,6 +53,7 @@
     - lm_sensors
     - mc
     - meld
+    - network-manager-applet
     - nmap
     - nmap-frontend
     - powerline-fonts
