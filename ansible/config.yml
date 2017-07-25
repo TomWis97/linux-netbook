@@ -1,0 +1,13 @@
+- file:
+    src: "{{ playbook_dir}}/configs/{{ item.name }}"
+    dest: "{{ ansible_env.HOME }}/{{ item.dest }}"
+    state: link
+  with_items:
+    - { name: "vimrc", dest: ".vimrc" }
+    - { name: "bashrc", dest: ".basrc" }
+    - { name: "tmux.conf", dest: ".tmux.conf" }
+    - { name: "i3", dest: ".config/i3/config" }
+    - { name: "compton.conf", dest: ".config/compton.conf" }
+    - { name: "rofi", dest: ".config/rofi/config" }
+    - { name: "terminator", dest: ".config/terminator/config" }
+
