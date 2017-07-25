@@ -8,6 +8,15 @@
       "[Settings]
       gtk-application-prefer-dark-theme=1"
 
+- name: Ensure that directories exist
+  file:
+    path: "{{ ansible_env.HOME }}/{{ item }}"
+    state: directory
+  with_items:
+    - .config/i3
+    - .config/rofi
+    - .config/terminator
+
 - name: Linking config files
   file:
     src: "{{ playbook_dir}}/configs/{{ item.name }}"
