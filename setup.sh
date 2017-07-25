@@ -4,4 +4,4 @@ if ! [ -x "$(command -v ansible)" ]; then
 else
 	echo "Ansible already installed"
 fi
-ansible-playbook ansible/main.yml --ask-sudo-pass
+ansible-playbook main.yml --ask-sudo-pass

@@ -3,12 +3,10 @@
   connection: local
   tasks:
     - debug:
-        msg: "{{item}}"
-      with_items:
-        - test1
-        - test2
+        var: playbook_dir
     - name: Install python2-dnf
       command: /usr/bin/dnf install -y python2-dnf
       become: yes
-    - include: dnf.yml
-    - include: pip3.yml
+    - include: ansible/dnf.yml
+    - include: ansible/pip3.yml
+    - include: ansible/config.yml
