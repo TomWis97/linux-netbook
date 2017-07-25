@@ -11,9 +11,6 @@
     state: started
     enabled: yes
 
-- debug:
-    var: ansible_user_id
-
 - name: Adding user to docker group
   become: yes
   user:

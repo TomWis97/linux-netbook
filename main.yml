@@ -1,9 +1,11 @@
 - name: tomwis97/linux-desktop
   hosts: localhost
   connection: local
+  vars:
+    - install_docker: yes
+    - install_synergy: yes
+    - synergy_server: CLNT-TomDesktop
   tasks:
-    - debug:
-        var: playbook_dir
     - name: Install python2-dnf
       command: /usr/bin/dnf install -y python2-dnf
       become: yes
@@ -11,3 +13,6 @@
     - include: ansible/pip3.yml
     - include: ansible/config.yml
     - include: ansible/docker.yml
+      when: install_docker == true
+    - include: ansible/synergy.yml
+      when: install_synergy == true

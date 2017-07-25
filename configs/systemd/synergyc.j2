@@ -1,0 +1,10 @@
+[Unit]
+Description=Synergy Client Daemon
+After=Network.target
+
+[Service]
+ExecStartPre=/usr/bin/sleep 5
+ExecStart=/usr/bin/synergyc --enable-crypto --no-daemon {{ synergy_server }}
+
+[Install]
+WantedBy=default.target
