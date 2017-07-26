@@ -31,4 +31,5 @@
     - { name: "compton.conf", dest: ".config/compton.conf" }
     - { name: "rofi", dest: ".config/rofi/config" }
     - { name: "terminator", dest: ".config/terminator/config" }
+    - { name: "polybar", dest: ".config/polybar" }
 
