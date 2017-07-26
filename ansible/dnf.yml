@@ -85,5 +85,15 @@
   become: yes
   dnf:
     name: "{{ item }}"
+    state: present
   with_items:
     - "{{ atom_url.stdout }}"
+
+- name: Remove unwanted packages
+  become: yes
+  dnf:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - PackageKit-command-not-found
+
