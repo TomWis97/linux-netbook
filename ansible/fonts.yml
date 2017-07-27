@@ -1,0 +1,31 @@
+- name: Check if Roboto Mono Nerd Font is installed
+  stat:
+    path: "{{ ansible_env.HOME }}/.fonts/Roboto Mono Nerd Font Complete Mono.ttf"
+  register: roboto_nerd_installed
+
+- name: Create .fonts directory
+  file:
+    path: "{{ ansible_env.HOME }}/.fonts"
+    state: directory
+
+- name: Extract Archive
+  when: roboto_nerd_installed.stat.exists == False
+  unarchive:
+    src: "https://github.com/ryanoasis/nerd-fonts/releases/download/v1.0.0/RobotoMono.zip"
+    dest: "{{ ansible_env.HOME }}/.fonts"
+    remote_src: True
+
+- name: Find Windows compatible fonts
+  find:
+    paths: "{{ ansible_env.HOME }}/.fonts"
+    patterns: "*Windows Compatible.ttf"
+  register: windows_fonts
+
+- debug:
+    var: windows_fonts
+
+- name: Remove Windows Compatible fonts
+  file:
+    path: "{{ item['path'] }}"
+    state: absent
+  with_items: "{{ windows_fonts['files'] }}"

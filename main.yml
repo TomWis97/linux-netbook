@@ -16,3 +16,4 @@
       when: install_docker == true
     - include: ansible/synergy.yml
       when: install_synergy == true
+    - include: ansible/fonts.yml
