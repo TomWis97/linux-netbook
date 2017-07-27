@@ -39,6 +39,7 @@
     state: present
   with_items:
     - acpi
+    - arandr
     - compton
     - ffmpeg
     - fuse-exfat
