@@ -5,8 +5,8 @@
   copy:
     dest: "{{ ansible_env.HOME }}/.config/gtk-3.0/settings.ini"
     content: |
-      "[Settings]
-      gtk-application-prefer-dark-theme=1"
+      [Settings]
+      gtk-application-prefer-dark-theme=1
 
 - name: Ensure that directories exist
   file:
