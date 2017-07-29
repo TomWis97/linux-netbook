@@ -52,7 +52,7 @@ line-color = ${colors.primary}
 
 ; Modules to show
 modules-left = i3
-modules-center = xwindow notification
+modules-center = notification xwindow
 modules-right = filesystem temperature cpu memory volume wifi ethernet battery time
 
 ; Show systray
@@ -68,6 +68,9 @@ tray-padding = 2
 ; Define actions for the bar
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
+
+; Enable IPC
+enable-ipc = true
 
 [module/i3]
 type = internal/i3
@@ -129,7 +132,14 @@ label-maxlen = 30
 ; Module for showing a notification when stuff happens
 ; Example: Show brightness when changed with keys
 type = custom/ipc
+format-background = ${colors.alert}
+initial = 1
 ; TODO finish this module
+; Hook 0: Test
+hook-0 = echo
+; Hook 1: Show current brightness
+hook-1 = echo "Brightness: $(xbacklight | cut -d '.' -f 1)"
+hook-2 = date
 
 
 [module/network]

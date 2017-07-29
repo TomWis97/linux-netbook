@@ -76,6 +76,7 @@
     - vlc
     - wireshark
     - wireshark-gtk
+    - xbacklight
     - xbindkeys
     - xguest
     - xorg-x11-apps
