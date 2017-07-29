@@ -83,12 +83,38 @@ fuzzy-match = true
 
 ; label for mode
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-background = ${colors.alert}
 
 format = <label-state> <label-mode>
 
 ; TODO: Check for more options for label-*
+
+; Workspaces
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-padding = 1
+label-focused-underline = ${colors.primary}
+label-focused-background = ${colors.background-alt}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-padding = 1
+label-visible-underline = ${colors.primary}
+label-visible-background =
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-padding = 1
+label-urgent-underline = 
+label-urgent-background = ${colors.alert}
+
+; unfocused = Inactive workspaces
+label-unfocused = %index%
+label-unfocused-padding = 1
+label-unfocused-underline = 
+label-unfocused-background =
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -96,7 +122,7 @@ format-foreground = ${colors.foreground}
 #format-background = ${colors.background}
 format-padding = 2
 
-label = %title%
+lable = %title%
 label-maxlen = 30
 
 [module/notification]
