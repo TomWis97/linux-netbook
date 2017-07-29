@@ -26,7 +26,7 @@ empty = #00000000
 ; Set width of bar
 width = 100%
 ; Set bar height
-height = 27
+height = 20
 ; Some settings I currently don't use:
 # offset-x = 1%
 # offset-y = 1%
@@ -36,7 +36,7 @@ height = 27
 # border-color = #00000000
 # padding-left = 0
 # padding-right = 0
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 2
 
 ; Set font
@@ -53,7 +53,7 @@ line-color = ${colors.primary}
 ; Modules to show
 modules-left = i3
 modules-center = xwindow notification
-modules-right = wifi ethernet volume filesystem temperature cpu memory battery time
+modules-right = filesystem temperature cpu memory volume wifi ethernet battery time
 
 ; Show systray
 tray-position = right
@@ -109,7 +109,6 @@ type = custom/ipc
 [module/network]
 type = internal/network
 interval = 4.0
-format-prefix-foreground = ${colors.foreground-alt}
 ; Available tokens for label-conencted:
 ; %ifname%, %local_ip%, %essid%, %signal%, %upspeed%, %downspeed%, %linkspeed%
 format-connected-underline = ${colors.primary}
@@ -121,17 +120,17 @@ label-disconnected = " "
 
 [module/wifi]
 inherit = module/network
-interface = TODO
-format-prefix = " "
+interface = wlp2s0
 format-connected = <label-connected>
-label-connected = %essid% (%signal%%)
+label-connected =  %essid% (%signal%%)
+label-disconnected = 
 
 
 [module/ethernet]
 inherit = module/network
-interface = TODO
-format-prefix = " "
-label-connected = %local_ip%
+interface = enp4s0
+label-connected =  %local_ip%
+label-disconnected = 
 
 [module/volume]
 type = internal/volume
@@ -175,16 +174,16 @@ ramp-foreground = ${colors.foreground-alt}
 type = internal/cpu
 interval = 0.5
 format = <label> 
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix = 
+#format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format = <label> 
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix = 
+#format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
 label = %percentage_used%%
 
 [module/battery]
@@ -199,8 +198,12 @@ time-format = %H:%M
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
-label-charging = %percentage%
-label-discharging = %percentage% (%time%@%consumption%)
+format-charging-underline =  ${colors.primary}
+format-discharging-underline =  ${colors.empty}
+format-full-underline =  ${colors.primary}
+label-charging = %percentage%%
+label-discharging = %percentage%%
+#label-discharging = %percentage%% (%time%@%consumption%)
 label-full = 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -221,7 +224,7 @@ type = internal/date
 interval = 1.0
 ; See `man date` for formatting
 date = %Y-%m-%d
-time = %H:%M
+time = %H:%M.%S
 label = %date% %time%
 
 ; vim:ft=dosini
