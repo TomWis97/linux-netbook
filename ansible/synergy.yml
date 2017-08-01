@@ -8,6 +8,11 @@
     msg: "Synergy can't be installed automatically. Install Synergy manually please, using the following URL: https://symless.com/synergy/download/direct?platform=rpm&architecture=x64"
   when: synergy_installed.rc == 1
 
+- name: Create directory for systemd user configs
+  file:
+    path: "{{ ansible_env.HOME }}/.config/systemd/user"
+    state: directory
+
 - name: Synergyc systemd user service config
   template:
     src: configs/systemd/synergyc.j2
@@ -16,6 +21,7 @@
 
 - name: Enabling synergyc service
   systemd:
+    name: synergyc
     user: yes
     daemon_reload: yes
     enabled: yes
