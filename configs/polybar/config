@@ -53,7 +53,7 @@ line-color = ${colors.primary}
 ; Modules to show
 modules-left = i3
 modules-center = notification xwindow
-modules-right = filesystem temperature cpu memory volume wifi ethernet battery time
+modules-right = filesystem temperature cpu memory volume wifi ethernet ethernetinteldesktop battery time
 
 ; Show systray
 tray-position = right
@@ -167,6 +167,10 @@ inherit = module/network
 interface = enp4s0
 label-connected =  %local_ip%
 label-disconnected = 
+
+[module/ethernetinteldesktop]
+inherit = module/ethernet
+interface = eno1
 
 [module/volume]
 type = internal/volume
