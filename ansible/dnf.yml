@@ -57,6 +57,7 @@
     - mc
     - meld
     - network-manager-applet
+    - nitrogen
     - nmap
     - nmap-frontend
     - polybar
@@ -74,6 +75,7 @@
     - thunar
     - thunderbird
     - tmux
+    - udiskie
     - vim
     - vlc
     - wireshark

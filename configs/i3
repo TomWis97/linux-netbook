@@ -162,7 +162,6 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-exec --no-startup-id nitrogen --restore
 
 # Colors
 # class                 border  backgr. text    indicator child_border
@@ -182,8 +181,11 @@ gaps outer 5
 smart_gaps on
 
 exec --no-startup-id compton
-exec --no-startup-id shutter --min_at_startup
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id udiskie --no-notify --tray
+# Commented because broken in Fedora 26
+#exec --no-startup-id shutter --min_at_startup
 
 # Function keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
