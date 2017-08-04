@@ -5,6 +5,7 @@ After=Network.target
 [Service]
 ExecStartPre=/usr/bin/sleep 5
 ExecStart=/usr/bin/synergyc --enable-crypto --no-daemon {{ synergy_server }}
+Restart=always
 
 [Install]
 WantedBy=default.target
