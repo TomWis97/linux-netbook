@@ -60,6 +60,7 @@
     - nitrogen
     - nmap
     - nmap-frontend
+    - openssh-askpass
     - polybar
     - powerline-fonts
     - puddletag
