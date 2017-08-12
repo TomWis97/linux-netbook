@@ -11,4 +11,4 @@ cd "$pwd"
 source bash_install/config.sh
 cd "$pwd"
 source bash_install/fonts.sh
-cd "$pwd
+cd "$pwd"
