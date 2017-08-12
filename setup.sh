@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
-if ! [ -x "$(command -v ansible)" ]; then
-	sudo dnf install -y ansible
-else
-	echo "Ansible already installed"
-fi
-ansible-playbook main.yml --ask-sudo-pass
+set -e
+echo "Run this script as normal user."
+sudo echo "Testing sudo"
+pwd=`pwd`
+echo "Running script from $pwd"
+source bash_install/test.sh
+cd "$pwd"
+exit
+
+source bash_install/pacaur.sh
+cd "$pwd"
+source bash_install/packages.sh
+cd "$pwd"
+source bash_install/config.sh
+cd "$pwd"
+source bash_install/fonts.sh
+cd "$pwd
