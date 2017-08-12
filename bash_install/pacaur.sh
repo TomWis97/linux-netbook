@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 echo ---------- Installing pacaur
+sudo pacman -S base-devel
 mkdir /tmp/p
 cd /tmp/p
 curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
