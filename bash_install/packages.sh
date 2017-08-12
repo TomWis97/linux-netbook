@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 echo "---------- Installing packages"
-pacaur -S \
+pacaur --noconfirm -S \
   i3-gaps \
   xorg-server \
   xorg-xinit \
