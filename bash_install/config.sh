@@ -7,6 +7,7 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
 fi
 EOF
 
+mkdir ~/.config
 ln -sf configs/xinitrc ~/.xinitrc
 mkdir ~/.config/i3
 ln -sf configs/i3 ~/.config/i3/config
