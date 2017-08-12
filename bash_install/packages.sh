@@ -4,7 +4,7 @@ echo "---------- Installing packages"
 pacaur -S \
   i3-gaps \
   xorg-server \
-  xorg-init \
+  xorg-xinit \
   xf86-video-intel \
   arandr \
   nitrogen \
@@ -15,5 +15,4 @@ pacaur -S \
   polybar-git \
   rofi-dmenu \
   tmux \
-  xorg-x11-apps \
   ttf-dejavu-sans-mono-powerline-git
