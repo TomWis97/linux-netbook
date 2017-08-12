@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-echo "---------- Installing fonts
+echo ---------- Installing fonts
 cat << 'EOF' >> ~/.bash_profile
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
