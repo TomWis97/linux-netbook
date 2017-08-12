@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 echo "---------- Installing packages"
-sudo pacaur -S \
-  i3 \
+pacaur -S \
+  i3-gaps \
   xorg-server \
   xorg-init \
   xf86-video-intel \
