@@ -12,8 +12,8 @@ pacaur --noedit --noconfirm -S \
   remmina \
   vim \
   terminator \
-  polybar-git \
   rofi-dmenu \
   tmux \
   unzip \
   ttf-dejavu-sans-mono-powerline-git
+pacaur --noconfirm -S polybar-git
