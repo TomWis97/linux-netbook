@@ -4,10 +4,6 @@ echo "Run this script as normal user."
 sudo echo "Testing sudo"
 pwd=`pwd`
 echo "Running script from $pwd"
-source bash_install/test.sh
-cd "$pwd"
-exit
-
 source bash_install/pacaur.sh
 cd "$pwd"
 source bash_install/packages.sh

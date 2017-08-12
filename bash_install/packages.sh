@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "---------- Installing packages"
-pacaur -S \
+sudo pacaur -S \
   i3 \
   xorg-server \
   xorg-init \
