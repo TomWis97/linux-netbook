@@ -8,15 +8,15 @@ fi
 EOF
 
 mkdir ~/.config
-ln -sf configs/xinitrc ~/.xinitrc
 mkdir ~/.config/i3
-ln -sf configs/i3 ~/.config/i3/config
-ln -sf configs/polybar ~/.config/polybar
 mkdir ~/.config/rofi/
-ln -sf configs/rofi ~/.config/rofi/config
 mkdir ~/.config/terminator
-ln -sf configs/terminator ~/.config/terminator/config
-ln -sf configs/tmux.conf ~/.tmux.conf
-ln -sf configs/vimrc ~/.vimrc
-ln -sf configs/xinitrc ~/.xinitrc
+ln -sf "$pwd/configs/xinitrc" ~/.xinitrc
+ln -sf "$pwd/configs/i3" ~/.config/i3/config
+ln -sf "$pwd/configs/polybar" ~/.config/polybar
+ln -sf "$pwd/configs/rofi" ~/.config/rofi/config
+ln -sf "$pwd/configs/terminator" ~/.config/terminator/config
+ln -sf "$pwd/configs/tmux.conf" ~/.tmux.conf
+ln -sf "$pwd/configs/vimrc" ~/.vimrc
+ln -sf "$pwd/configs/xinitrc" ~/.xinitrc
 
