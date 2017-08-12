@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 echo ---------- Installing fonts
 cd /tmp
 mkdir ~/.fonts

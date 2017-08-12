@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -ex
 echo "---------- Installing packages"
 sudo pacaur -S \
   i3 \

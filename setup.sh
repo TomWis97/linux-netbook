@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 echo "Run this script as normal user."
 sudo echo "Testing sudo"
 pwd=`pwd`

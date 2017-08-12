@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -ex
 echo ---------- Installing pacaur
 sudo pacman -S base-devel
 mkdir /tmp/p
