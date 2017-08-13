@@ -15,5 +15,8 @@ pacaur --noedit --noconfirm -S \
   rofi-dmenu \
   tmux \
   unzip \
-  ttf-dejavu-sans-mono-powerline-git
+  ttf-dejavu-sans-mono-powerline-git \
+  google-chrome \
+  libreoffice-fresh \
+  firefox
 pacaur --noconfirm -S polybar-git
