@@ -1,8 +1,18 @@
 # TomWis97/linux-netbook
 Installing Arch
 1. Install from ISO
+Create partitions with `parted /dev/sda -a optimal"`:
 ```
-fdisk /dev/sda
+mklabel msdos
+mkpart primary ext4 0% -4GB
+mkpart primary linux-swap -4GB 100%
+set 1 boot on
+quit
+```
+
+```
+mkswap /dev/sda2
+swapon /dev/sda2
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 
