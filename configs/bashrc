@@ -8,6 +8,9 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# Add ~/.local/bin to $PATH
+export PATH=$PATH:~/.local/bin
+
 # User specific aliases and functions
 alias vi=vim
 alias l="ls -la"

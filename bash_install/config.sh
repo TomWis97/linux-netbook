@@ -19,4 +19,5 @@ ln -sf "$pwd/configs/terminator" ~/.config/terminator/config
 ln -sf "$pwd/configs/tmux.conf" ~/.tmux.conf
 ln -sf "$pwd/configs/vimrc" ~/.vimrc
 ln -sf "$pwd/configs/xinitrc" ~/.xinitrc
+ln -sf "$pwd/configs/bashrc" ~/.bashrc
 
