@@ -18,5 +18,6 @@ pacaur --noedit --noconfirm -S \
   ttf-dejavu-sans-mono-powerline-git \
   google-chrome \
   libreoffice-fresh \
+  htop \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
