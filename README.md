@@ -26,30 +26,29 @@ hwclock --systohc
 
 vi /etc/locale.gen
 locale-gen
-ecoh 'LANG=en_US.UTF-8' > /etc/locale.conf
+echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 passwd
 
-pacman -S grub networkmanager
-grub-install --target=i386-pc
+pacman -S grub networkmanager sudo git
+grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-exit
-reboot
-```
 
-2. After install configuration
-```
 systemctl enable NetworkManager
-systemctl start NetworkManager
 hostnamectl set-hostname CLNT-Netbook
 
 useradd -mU -G wheel tom
 passwd tom
-pacman -S sudo
 visudo
 
-su - tom
-sudo pacman -S git
+exit
+umount /mnt
+reboot
+```
+
+2. After install configuration   
+Login as user.
+```
 git clone https://github.com/TomWis97/linux-netbook
 cd linux-netbook
 ./setup.sh
