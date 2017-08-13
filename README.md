@@ -1,7 +1,7 @@
 # TomWis97/linux-netbook
 Installing Arch
-1. Install from ISO
-Create partitions with `parted /dev/sda -a optimal"`:
+1. Install from ISO   
+Create partitions with `parted /dev/sda -a optimal`:
 ```
 mklabel msdos
 mkpart primary ext4 0% -4GB
