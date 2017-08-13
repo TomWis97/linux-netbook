@@ -19,4 +19,4 @@ pacaur --noedit --noconfirm -S \
   google-chrome \
   libreoffice-fresh \
   firefox
-pacaur --noconfirm -S polybar-git
+pacaur --noedit --noconfirm -S polybar-git
