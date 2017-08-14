@@ -4,6 +4,8 @@ echo "Run this script as normal user."
 sudo echo "Testing sudo"
 pwd=`pwd`
 echo "Running script from $pwd"
+echo "---------- Updating intall"
+sudo pacman -Syu
 source bash_install/pacaur.sh
 cd "$pwd"
 source bash_install/packages.sh
