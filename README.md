@@ -16,6 +16,11 @@ swapon /dev/sda2
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 
+timedatectl set-ntp true
+timedatectl status
+
+vi /etc/pacman.d/mirrorlist
+
 pacstrap /mnt base
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -35,11 +40,10 @@ grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
-hostnamectl set-hostname CLNT-Netbook
 
 useradd -mU -G wheel tom
 passwd tom
-visudo
+vi /etc/sudoers
 
 exit
 umount /mnt
@@ -49,6 +53,7 @@ reboot
 2. After install configuration   
 Login as user.
 ```
+hostnamectl set-hostname CLNT-Netbook
 git clone https://github.com/TomWis97/linux-netbook
 cd linux-netbook
 ./setup.sh
