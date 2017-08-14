@@ -35,11 +35,12 @@ echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 passwd
 
-pacman -S grub networkmanager sudo git
+pacman -S grub networkmanager sudo git sshd
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
+systemctl enable sshd
 
 useradd -mU -G wheel tom
 passwd tom
