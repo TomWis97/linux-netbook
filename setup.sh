@@ -5,7 +5,7 @@ sudo echo "Testing sudo"
 pwd=`pwd`
 echo "Running script from $pwd"
 echo "---------- Updating intall"
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 source bash_install/pacaur.sh
 cd "$pwd"
 source bash_install/packages.sh
