@@ -132,7 +132,6 @@ bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'Really want to shutdown?' -b
 
 # Lock commands
 bindsym $mod+Shift+w exec "~/.config/i3/lock.sh"
-bindsym $mod+Shift+l exec "~/.config/i3/lock.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
