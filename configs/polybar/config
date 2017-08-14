@@ -52,7 +52,7 @@ line-color = ${colors.primary}
 
 ; Modules to show
 modules-left = i3
-modules-center = notification xwindow
+modules-center = notification
 modules-right = filesystem temperature cpu memory wifiasus ethernetasus battery time
 
 ; Show systray
