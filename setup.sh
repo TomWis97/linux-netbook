@@ -10,6 +10,8 @@ source bash_install/pacaur.sh
 cd "$pwd"
 source bash_install/packages.sh
 cd "$pwd"
+source bash_install/pip.sh
+cd "$pwd"
 source bash_install/config.sh
 cd "$pwd"
 source bash_install/fonts.sh
