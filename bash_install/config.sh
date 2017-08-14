@@ -21,5 +21,5 @@ ln -sf "$pwd/configs/xinitrc" ~/.xinitrc
 ln -sf "$pwd/configs/bashrc" ~/.bashrc
 
 mkdir ~/Wallpapers
-cp "$pwd/lockscreen.png" "~/Wallpapers/lockscreen.png"
+cp "$pwd/lockscreen.png" ~/Wallpapers/lockscreen.png
 
