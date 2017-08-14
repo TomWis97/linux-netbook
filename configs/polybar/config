@@ -53,7 +53,7 @@ line-color = ${colors.primary}
 ; Modules to show
 modules-left = i3
 modules-center = notification xwindow
-modules-right = filesystem temperature cpu memory volume wifi ethernet ethernetinteldesktop battery time
+modules-right = filesystem temperature cpu memory wifiasus ethernetasus battery time
 
 ; Show systray
 tray-position = right
@@ -169,9 +169,13 @@ interface = enp4s0
 label-connected =  %local_ip%
 label-disconnected = 
 
-[module/ethernetinteldesktop]
+[module/ethernetasus]
 inherit = module/ethernet
-interface = eno1
+interface = enp1s0 
+
+[module/wifiasus]
+inherit = module/wifi
+interface = wlp2s0
 
 [module/volume]
 type = internal/volume
@@ -233,7 +237,7 @@ full-at = 98
 ; Get list of batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
 battery = BAT0
-adaper = ADP1
+adaper = AC1
 poll-interval = 5
 time-format = %H:%M
 format-charging = <animation-charging> <label-charging>
