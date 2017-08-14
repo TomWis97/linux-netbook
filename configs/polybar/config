@@ -139,7 +139,8 @@ initial = 1
 hook-0 = echo
 ; Hook 1: Show current brightness
 hook-1 = echo "Brightness: $(xbacklight | cut -d '.' -f 1)"
-hook-2 = date
+hook-2 = echo "Locking..."
+hook-3 = date
 
 
 [module/network]
