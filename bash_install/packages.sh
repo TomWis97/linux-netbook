@@ -19,5 +19,7 @@ pacaur --noedit --noconfirm -S \
   google-chrome \
   libreoffice-fresh \
   htop \
+  imagemagick \
+  i3lock \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
