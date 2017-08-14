@@ -14,6 +14,7 @@ source bash_install/config.sh
 cd "$pwd"
 source bash_install/fonts.sh
 cd "$pwd"
+set +ex
 echo "####################"
 echo "# Install Complete #"
 echo "####################"
