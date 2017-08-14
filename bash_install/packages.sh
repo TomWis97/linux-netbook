@@ -21,5 +21,6 @@ pacaur --noedit --noconfirm -S \
   htop \
   imagemagick \
   i3lock \
+  wireless_tools \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
