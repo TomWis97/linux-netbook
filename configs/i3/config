@@ -188,6 +188,7 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id udiskie --no-notify --tray
 # Commented because broken in Fedora 26
 #exec --no-startup-id shutter --min_at_startup
+exec --no-startup-id i3 --get-socketpath > /tmp/i3ipc
 
 # Function keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
