@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import i3ipc
+
+f = open('/tmp/i3ipc')
+i3socketpath = f.read().rstrip()
+print(i3socketpath)
+
+i3 = i3ipc.Connection(socket_path=i3socketpath)
+i3.command('exec /home/tom/.config/i3/lock.sh')
