@@ -21,7 +21,7 @@ ln -sf "$pwd/configs/xinitrc" ~/.xinitrc
 ln -sf "$pwd/configs/bashrc" ~/.bashrc
 
 sudo cp "$pwd/configs/resume.service" /etc/systemd/system/resume.service
-systemctl enable resume.service
+sudo systemctl enable resume.service
 
 sudo cp "$pwd/bin/i3ipc-lock" /usr/local/bin/i3ipc-lock
 
