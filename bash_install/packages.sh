@@ -23,5 +23,7 @@ pacaur --noedit --noconfirm -S \
   i3lock \
   wireless_tools \
   gimp \
+  vlc \
+  pcmanfm \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
