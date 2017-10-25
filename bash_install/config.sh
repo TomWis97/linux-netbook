@@ -13,7 +13,7 @@ mkdir ~/.config/terminator
 ln -sf "$pwd/configs/xinitrc" ~/.xinitrc
 ln -sf "$pwd/configs/i3" ~/.config/i3
 ln -sf "$pwd/configs/polybar" ~/.config/polybar
-ln -sf "$pwd/configs/rofi" ~/.config/rofi/config
+ln -sf "$pwd/configs/rofi.rasi" ~/.config/rofi/config.rasi
 ln -sf "$pwd/configs/terminator" ~/.config/terminator/config
 ln -sf "$pwd/configs/tmux.conf" ~/.tmux.conf
 ln -sf "$pwd/configs/vimrc" ~/.vimrc
