@@ -25,5 +25,6 @@ pacaur --noedit --noconfirm -S \
   gimp \
   vlc \
   pcmanfm \
+  freerdp \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
