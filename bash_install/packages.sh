@@ -26,5 +26,7 @@ pacaur --noedit --noconfirm -S \
   vlc \
   pcmanfm \
   freerdp \
+  openvpn \
+  networkmanager-openvpn \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
