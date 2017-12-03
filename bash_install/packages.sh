@@ -28,5 +28,6 @@ pacaur --noedit --noconfirm -S \
   freerdp \
   openvpn \
   networkmanager-openvpn \
+  jsoncpp \
   firefox
 pacaur --noedit --noconfirm -S polybar-git
