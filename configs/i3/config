@@ -42,8 +42,8 @@ bindsym $mod+F4 kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec "rofi -show drun -modi run,drun -lines 10 -width 40 -scroll-method 1 -levenshtein-sort -display-run 'Run executable' -display-drun 'Run application' -display-window 'Switch window'"
-bindsym $mod+Tab exec "rofi -show window -modi window,windowcd -lines 10 -width 40 -scroll-method 1 -levenshtein-sort -display-run 'Run executable' -display-drun 'Run application' -display-window 'Switch window'"
+bindsym $mod+d exec "rofi -show drun -modi run,drun -lines 10 -width 40 -scroll-method 1 -levenshtein-sort -display-run 'Run executable: ' -display-drun 'Run application: ' -display-window 'Switch window: '"
+bindsym $mod+Tab exec "rofi -show window -modi window,windowcd -lines 10 -width 40 -scroll-method 1 -levenshtein-sort -display-run 'Run executable: ' -display-drun 'Run application: ' -display-window 'Switch window: '"
 
 # change focus
 bindsym $mod+h focus left
